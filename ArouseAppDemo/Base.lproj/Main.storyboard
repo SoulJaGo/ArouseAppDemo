@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K2m-o6-vY1">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="cCW-Pd-woW"/>
+                                    <constraint firstAttribute="width" constant="200" id="tSS-V1-RjN"/>
+                                </constraints>
+                                <state key="normal" title="唤醒APP"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="cCW-Pd-woW"/>
+                                        <exclude reference="tSS-V1-RjN"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="cCW-Pd-woW"/>
+                                        <include reference="tSS-V1-RjN"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="onClickArouseBtn" destination="BYZ-38-t0r" eventType="touchUpInside" id="UEO-Im-nqx"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入您想调用APP的URL Schemes" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fae-Qt-39d">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="5rZ-m1-UbV"/>
+                                    <constraint firstAttribute="width" constant="232" id="AfI-Qe-wJK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="5rZ-m1-UbV"/>
+                                        <exclude reference="AfI-Qe-wJK"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="5rZ-m1-UbV"/>
+                                        <include reference="AfI-Qe-wJK"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fae-Qt-39d" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9KP-Nk-J8t"/>
+                            <constraint firstItem="K2m-o6-vY1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ktL-gf-ehS"/>
+                            <constraint firstItem="K2m-o6-vY1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="oKd-dQ-E33"/>
+                            <constraint firstItem="K2m-o6-vY1" firstAttribute="top" secondItem="fae-Qt-39d" secondAttribute="bottom" constant="79" id="yDI-os-fCu">
+                                <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                            </constraint>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="K2m-o6-vY1"/>
+                                <exclude reference="fae-Qt-39d"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="9KP-Nk-J8t"/>
+                                <exclude reference="ktL-gf-ehS"/>
+                                <exclude reference="oKd-dQ-E33"/>
+                                <exclude reference="yDI-os-fCu"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="K2m-o6-vY1"/>
+                                <include reference="fae-Qt-39d"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="9KP-Nk-J8t"/>
+                                <include reference="ktL-gf-ehS"/>
+                                <include reference="oKd-dQ-E33"/>
+                                <include reference="yDI-os-fCu"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="appUrlScheme" destination="fae-Qt-39d" id="2Xu-hy-c5I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="249" y="306"/>
+        </scene>
+    </scenes>
+</document>
